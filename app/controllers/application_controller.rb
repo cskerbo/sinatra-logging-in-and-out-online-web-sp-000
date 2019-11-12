@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    @user = Helpers.current_user(session)
+    @user = Helpers.current_user(session: session)
     erb :account
   end
 
